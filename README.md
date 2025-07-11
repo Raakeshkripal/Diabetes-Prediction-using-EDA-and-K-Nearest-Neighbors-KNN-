@@ -1,96 +1,86 @@
-# Diabetes-Prediction-using-EDA-and-K-Nearest-Neighbors-KNN-
-This project aims to analyze and predict diabetes in patients using Exploratory Data Analysis (EDA) and a supervised machine learning algorithm — K-Nearest Neighbors (KNN). The dataset used is the Pima Indians Diabetes Dataset, widely used for binary classification problems.
-📌 Overview
-EDA (Exploratory Data Analysis) is performed to understand the underlying patterns, relationships, and data distributions.
+# 🩺 Diabetes Prediction using EDA and K-Nearest Neighbors (KNN)
 
-KNN (K-Nearest Neighbors) is implemented to classify patients into diabetic or non-diabetic groups.
+This project aims to analyze and predict diabetes in patients using Exploratory Data Analysis (EDA) and a supervised machine learning algorithm, K-Nearest Neighbors (KNN). The dataset used is the Pima Indians Diabetes Dataset, which is widely used for binary classification problems.
 
-Data Preprocessing, Normalization, and Model Evaluation are key steps in the pipeline.
+---
 
-The model is evaluated using metrics like accuracy, confusion matrix, and classification report.
+## 📌 Overview
 
-📊 Dataset
-Source: diabetes.csv
+This project involves:
+- Cleaning and analyzing medical data
+- Visualizing data distributions and relationships
+- Standardizing features for model training
+- Applying the K-Nearest Neighbors classification algorithm
+- Evaluating model performance using standard metrics
 
-Attributes:
+---
 
-Pregnancies
+## 📊 Dataset
 
-Glucose
+- **Source File**: `diabetes.csv`
+- **Features**:
+  - `Pregnancies`
+  - `Glucose`
+  - `BloodPressure`
+  - `SkinThickness`
+  - `Insulin`
+  - `BMI`
+  - `DiabetesPedigreeFunction`
+  - `Age`
+  - `Outcome` (Target variable: 0 = Non-Diabetic, 1 = Diabetic)
 
-BloodPressure
+---
 
-SkinThickness
+## 🔧 Steps Performed
 
-Insulin
+1. **Exploratory Data Analysis (EDA)**
+   - Checked for null values, duplicates
+   - Used `boxplots`, `histograms`, and `pairplots`
+   - Visualized target class distribution
 
-BMI
+2. **Feature Standardization**
+   - Used `StandardScaler` to normalize data before model fitting
 
-DiabetesPedigreeFunction
+3. **Model Training with KNN**
+   - Split data into training and testing sets (70/30)
+   - Trained KNN with different values of K
+   - Plotted training vs testing accuracy to select optimal K
 
-Age
+4. **Model Evaluation**
+   - Achieved best test accuracy at **k = 13**
+   - Evaluated model using:
+     - Accuracy score
+     - Confusion matrix
+     - Classification report (precision, recall, F1-score)
 
-Outcome (0 = No Diabetes, 1 = Diabetes)
+---
 
-🔧 Project Workflow
-Data Cleaning & Exploration
+## 📈 Results
 
-Null and duplicate checks
+- ✅ **Max Test Accuracy**: ~78.3%
+- 🧠 Best K value: **13**
+- Model performs reasonably well in identifying diabetic cases.
 
-Summary statistics
+---
 
-Distribution plots
+## 🚀 Future Scope
 
-Pairplots and correlation heatmap
+- 🌐 **Web Interface**: Deploy the model in a web-based frontend for real-time prediction.
+- 🔍 **Advanced Models**: Use more robust classifiers like Random Forest, SVM, or XGBoost.
+- 📚 **Larger Dataset**: Use a more complex or larger dataset for better generalization.
+- 🧩 **Explainable AI**: Add feature interpretation tools (SHAP, LIME) to understand predictions better.
 
-Outlier Detection
+---
 
-Boxplots across features
+## 🤝 Contributing
 
-Data Normalization
+Feel free to fork the repository or raise issues or PRs for enhancements. Collaboration is welcome!
 
-Using StandardScaler to standardize input features
+---
 
-Model Building
+## 👤 Author
 
-Train-Test split (70-30)
-
-Implementation of KNN classifier
-
-Optimal K value selection using accuracy curves
-
-Evaluation
-
-Accuracy score
-
-Confusion Matrix
-
-Classification Report (Precision, Recall, F1-Score)
-
-📈 Results
-Best Test Accuracy: ~78.3% at k = 13
-
-The model performs well in classifying diabetic and non-diabetic cases with a balanced precision and recall.
-
-🚀 Future Scope
-Web App Deployment: This model can be deployed as a user-friendly web application for real-time predictions.
-
-Advanced Models: Additional classifiers like Random Forest, SVM, or Deep Learning models can be experimented with.
-
-Rich Dataset: Incorporate more diverse and complex datasets for better generalization.
-
-Model Interpretability: Add SHAP or LIME to interpret feature importance.
-
-🛡 License
-This project is licensed under the Apache License 2.0 — see the LICENSE file for details.
-
-⚠️ Permission is required to reuse this project or its components commercially or academically. Please contact the author via GitHub or email.
-
-🤝 Contributing
-Pull requests and forks are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-👨‍💻 Author
-Raakesh Kripal VUK
+**Raakesh Kripal VUK**  
 📧 raakeshkripal.vuk@gmail.com
 
-
+---
